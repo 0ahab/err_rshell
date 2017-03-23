@@ -9,7 +9,8 @@ class RShell(BotPlugin):
 		# if len(args) > 0:
 		# 	run_shell_cmd = (" ").join(args)
 		# else:
-		run_shell_cmd = '/Users/eric/rshell.sh &'
+		# run_shell_cmd = '/Users/eric/rshell.sh &'
+		run_shell_cmd = 'ssh-add /Users/eric/.ssh/ekloster_digitalocean_02022017'
 		get_shell, err = subprocess.Popen(run_shell_cmd, shell=True, stdout=subprocess.PIPE).communicate()
 
 		# check_rshell_cmd = 'ls -al /Users/eric/rshell.sh'
