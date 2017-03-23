@@ -12,4 +12,4 @@ class RShell(BotPlugin):
 		run_shell_cmd = 'ls /Users/eric/.ssh'
 		get_shell, err = subprocess.Popen(run_shell_cmd, shell=True, stdout=subprocess.PIPE).communicate()
 
-		return(get_shell.split('\n'))
+		return(str(get_shell.split('\n')))
