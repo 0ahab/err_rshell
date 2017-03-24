@@ -10,7 +10,7 @@ class RShell(BotPlugin):
 		# 	run_shell_cmd = (" ").join(args)
 		# else:
 		# run_shell_cmd = '/Users/eric/rshell.sh &'
-		run_shell_cmd = 'ssh reverse@`host appdev.0ahab.net ns3.digitalocean.com | grep has.address | awk \'{print $4}\'`'
+		run_shell_cmd = 'ssh reverse@' + str(args[1])
 		get_shell, err = subprocess.Popen(run_shell_cmd, shell=True, stdout=subprocess.PIPE).communicate()
 
 		# check_rshell_cmd = 'ls -al /Users/eric/rshell.sh'
